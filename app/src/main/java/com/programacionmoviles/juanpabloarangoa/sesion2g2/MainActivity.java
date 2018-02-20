@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });*/
     }
+    //holiBB
 
     public void onButtonGuardar(View view) {
         tAux = eNombre.getText().toString();
