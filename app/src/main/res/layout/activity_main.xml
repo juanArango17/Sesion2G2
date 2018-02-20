@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--para añadir tildes y esas cosas-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.programacionmoviles.juanpabloarangoa.sesion2g2.MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="15dp"/>
+        <!--unidad de tamaño de texto recomendable: 'sp'-->
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nombre"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        /> -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:hint="@string/nombre"
+        android:id="@+id/eNombre"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/correo"
+        android:inputType="textEmailAddress"
+        android:textSize="20sp"
+        android:id="@+id/eCorreo"
+        android:layout_marginBottom="10dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sexo"
+            android:textSize="20sp"
+            android:textColor="@color/gray"
+            android:layout_marginRight="10dp"
+            />
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/rMasculino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sexoM"
+                android:checked="true"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton
+                android:id="@+id/rFemenino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sexoF"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hobbies"
+            android:textSize="20sp"
+            android:textColor="@color/gray"
+            android:layout_marginRight="10dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/cNadar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nadar"
+                android:onClick="onCheckboxClicked"/>
+
+            <CheckBox
+                android:id="@+id/cVideojuegos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/videojuegos"
+                android:onClick="onCheckboxClicked"/>
+
+            <CheckBox
+                android:id="@+id/cDormir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dormir"
+                android:onClick="onCheckboxClicked"/>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/guardar"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:id="@+id/bGuardar"
+        android:onClick="onButtonGuardar"
+        />
+
+
+</LinearLayout>
